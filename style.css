@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #143253;
+    --secondary-color: #a8a2a2;
+    --error-color: #d32f2f;
+    --table: #0765C9;
+    ;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    background: linear-gradient(to right, #A0C4E8, #ebf1f7); 
+    color: #333;
+    padding: 20px;
+}
+
+/* Main container styling */
+#semester-forms {
+    margin-bottom: 20px;
+}
+
+h1{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    /* align-items: center; */
+}
+
+h2 {
+    margin-bottom: 6px;
+    color: #0765C9;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="number"],
+button, select {
+    padding: 12px;
+    margin: 5px 0;
+    border: 2px solid var(--primary-color); 
+    border-radius: 15px;
+    width: 100%;
+    transition: border-color 0.3s ease, transform 0.2s;
+}
+
+
+input:focus {
+    border-color: #0765C9; 
+}
+
+
+
+/* Button styling */
+button {
+    background-color: var(--primary-color); /* Teal background */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #eee7e7;
+    border: 2px solid var(--primary-color);
+    transform: translateY(-2px); /* Slight lift effect */
+    color: var(--primary-color);
+}
+
+.luf{
+    background-color: var(--error-color);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 2px solid var(--primary-color); /* Teal border for table cells */
+    text-align: left;
+    text-transform: uppercase;
+}
+
+th {
+    background-color: var(--table); /* Darker teal for header */
+    color: white;
+}
+
+tfoot {
+    background-color: #b2dfdb; /* Light teal for footer */
+    font-weight: bold;
+}
+
+/* Error message styling */
+#error1,
+#error2,
+#error3,
+#error4,
+#error5 {
+    margin-top: 10px;
+    color: var(--error-color); /* Red for error messages */
+    font-weight: bold;
+}
+
+/* Result display styling */
+#ShowCGPAResult {
+    margin-top: 20px;
+    font-size: 1.5em; /* Larger font for result */
+    font-weight: bold;
+    color: #00796b; /* Teal for results */
+}
+
+/* Print result styling */
+#ShowPrint {
+    margin-top: 20px;
+    color: #388e3c; /* Green for print result */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="number"],
+    button {
+        font-size: 16px; /* Slightly larger font on mobile */
+    }
+}
+
+@media (min-width: 768px) {
+    /* Make the desktop view similar to mobile */
+    body {
+        padding: 10px 30px; /* Add horizontal padding */
+    }
+
+    h2 {
+        text-align: center; /* Center headings on larger screens */
+    }
+
+    button {
+        margin-bottom: 15px; /* Space buttons apart */
+    }
+
+    table {
+        margin-top: 15px; /* Space above the table */
+    }
+
+    #ShowCGPAResult,
+    #ShowPrint {
+        text-align: center; /* Center text on larger screens */
+    }
+}
